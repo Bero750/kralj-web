@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="hr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KRALJ | Obrt za trgovinu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root { --ink:#05291d; --deep:#00160f; --gold:#e8ad4e; --paper:#f7f4ee; --muted:#d8d1c4; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--paper); color:#15231e; font-family:Manrope,Arial,sans-serif; }
+    .wrap { width:min(1200px, calc(100% - 48px)); margin:auto; }
+    .utility { background:#031a12; color:#f7f1e6; border-bottom:1px solid rgba(255,255,255,.14); font-size:12px; }
+    .utility .wrap { min-height:48px; display:flex; align-items:center; justify-content:space-between; gap:18px; flex-wrap:wrap; }
+    .utility span::before { color:var(--gold); margin-right:8px; }
+    .pin::before{content:'●'} .clock::before{content:'◷'} .phone::before{content:'⌕'} .mail::before{content:'✉'}
+    header { background:linear-gradient(90deg,#02170f 0%,#082f20 65%,#031c12); color:#fff; border-bottom:1px solid rgba(232,173,78,.25); }
+    nav { height:98px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
+    .brand { display:flex; align-items:center; gap:12px; width:265px; height:90px; text-decoration:none; color:#fff; }
+    .brand-logo { width:62px; height:72px; flex:none; }
+    .brand-logo path,.brand-logo polyline { fill:none; stroke:#e8ad4e; stroke-width:2.3; stroke-linecap:round; stroke-linejoin:round; }
+    .brand-logo .crown { fill:#e8ad4e; stroke:none; }.brand-logo .head { fill:#e8ad4e; stroke:none; }
+    .brand-copy strong { display:block; font:700 40px/.8 'Cormorant Garamond',serif; letter-spacing:3px; }
+    .brand-copy small { display:block; margin-top:9px; color:#e8ad4e; font-size:9px; letter-spacing:1.2px; }
+    .nav-links { display:flex; gap:38px; list-style:none; margin:0; padding:0; font-size:13px; font-weight:800; }
+    .nav-links a { color:white; text-decoration:none; padding:38px 0 12px; border-bottom:2px solid transparent; }
+    .nav-links a:hover,.nav-links a.active { color:var(--gold); border-color:var(--gold); }
+    .hero { min-height:548px; background:linear-gradient(90deg,rgba(0,16,10,.96) 0%,rgba(0,22,14,.78) 45%,rgba(0,14,10,.08) 100%),url('https://images.unsplash.com/photo-1697564157817-5b4675770bff?auto=format&fit=crop&w=1800&q=88') center 42%/cover; color:white; display:flex; align-items:center; position:relative; overflow:hidden; }
+    .hero::after { content:'✦  ✦  ✦'; position:absolute; right:4%; bottom:22px; color:rgba(232,173,78,.52); font-size:27px; letter-spacing:13px; transform:rotate(-12deg); }
+    .hero-content { padding:78px 0; max-width:610px; }
+    h1,h2,h3,p { margin-top:0; }
+    h1 { margin-bottom:16px; font:700 clamp(48px,6vw,78px)/.86 'Cormorant Garamond',serif; letter-spacing:1px; }
+    h1 em { color:var(--gold); font-style:normal; }
+    .since { display:flex; align-items:center; gap:12px; color:#fff9ea; font:600 21px 'Cormorant Garamond',serif; letter-spacing:1px; margin:20px 0 18px; }
+    .since::before,.since::after { content:''; width:54px; border-top:2px solid var(--gold); }
+    .hero p { max-width:430px; line-height:1.7; font-size:15px; }
+    .buttons { display:flex; gap:14px; margin-top:26px; flex-wrap:wrap; }
+    .button { display:inline-block; padding:14px 22px; text-decoration:none; font-size:12px; font-weight:800; letter-spacing:.4px; border:1px solid var(--gold); color:white; }
+    .button.gold { background:var(--gold); color:#17120a; }
+    .benefits { background:#fffdf9; border-bottom:1px solid #e8e1d4; }
+    .benefits .wrap { display:grid; grid-template-columns:repeat(5,1fr); }
+    .benefit { padding:30px 18px; border-right:1px solid #e6dfd5; display:flex; gap:12px; align-items:flex-start; }
+    .benefit:last-child { border:0; }
+    .benefit i { color:var(--ink); font-style:normal; font-size:29px; line-height:1; }
+    .benefit strong { font-size:10px; display:block; margin:1px 0 6px; }
+    .benefit span { font-size:10px; line-height:1.5; color:#4b544f; }
+    .section { padding:70px 0; }
+    .section-title { text-align:center; font:700 34px/1 'Cormorant Garamond',serif; letter-spacing:1px; color:#151c18; margin-bottom:35px; }
+    .section-title::after { content:''; display:block; width:42px; margin:11px auto 0; border-top:2px solid var(--gold); }
+    .cards { display:grid; grid-template-columns:repeat(5,1fr); gap:13px; }
+    .card { min-height:330px; color:#fff; background:linear-gradient(145deg,#063d29,#022719); overflow:hidden; border-radius:2px; box-shadow:0 9px 23px rgba(0,0,0,.13); display:flex; flex-direction:column; border:1px solid rgba(232,173,78,.18); }
+    .card-image { height:153px; background:center/cover; filter:saturate(.9) contrast(1.07); }
+    .rifle{background-image:url('https://images.unsplash.com/photo-1681679651000-c82e36c7aa64?auto=format&fit=crop&w=640&q=84')}.optic{background-image:url('https://images.unsplash.com/photo-1698253968379-6c9680265917?auto=format&fit=crop&w=640&q=84')}
+    .camera,.night,.outdoor { background-image:url('./kralj-reference.png'); background-repeat:no-repeat; background-size:1024px 1536px; }
+    .camera { background-position:-420px -770px; }.night { background-position:-612px -770px; }.outdoor { background-position:-806px -770px; }
+    .card-body { padding:16px 14px 18px; text-align:center; display:flex; flex:1; flex-direction:column; }
+    .card-icon { color:var(--gold); font-size:27px; margin-top:-32px; height:30px; }
+    .card h3 { margin:9px 0 8px; font-size:13px; }
+    .card p { font-size:11px; line-height:1.6; margin-bottom:15px; }
+    .card a { color:var(--gold); text-decoration:none; font-size:10px; font-weight:800; margin-top:auto; }
+    .about { background:linear-gradient(90deg,rgba(248,245,239,.98),rgba(248,245,239,.78)),url('https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1800&q=70') center/cover; position:relative; }
+    .about::after { content:'♜'; position:absolute; right:4%; bottom:18px; font-size:130px; color:rgba(5,41,29,.09); }
+    .about-grid { display:grid; grid-template-columns:1.3fr .7fr; gap:70px; align-items:center; }
+    .about h2 { font:700 32px/1 'Cormorant Garamond',serif; margin-bottom:24px; }
+    .about h2::after { content:''; display:block; width:44px; margin-top:10px; border-top:2px solid var(--gold); }
+    .about p { max-width:650px; font-size:13px; line-height:1.75; }
+    .partner { text-align:center; }.partner h2 { font-size:30px; }.partner .deer { width:156px; height:136px; margin:0 auto; background:url('./kralj-reference.png') no-repeat -675px -1180px / 1024px 1536px; }
+    footer { background:linear-gradient(110deg,#04291b,#00190e); color:white; padding:40px 0 16px; }
+    .footer-grid { display:grid; grid-template-columns:1.15fr .85fr 1fr 1.35fr; gap:24px; }
+    footer h3 { color:var(--gold); font-size:13px; margin:0 0 15px; } footer p,footer li { font-size:12px; line-height:1.7; margin:0; list-style:none; padding:0; } footer ul{padding:0;margin:0;}
+    .map { height:105px; display:grid; place-items:center; background:linear-gradient(135deg,#e6ddd0,#c8c1b5); color:#28352e; font-size:12px; border-radius:2px; }
+    .map-link { display:inline-block; margin-top:10px; color:var(--gold); border:1px solid var(--gold); padding:7px 12px; font-size:10px; font-weight:800; text-decoration:none; }
+    .copyright { border-top:1px solid rgba(255,255,255,.15); margin-top:28px; padding-top:13px; font-size:11px; color:#e4dfd4; }
+    @media(max-width:900px){.nav-links{display:none}.utility .wrap{padding:10px 0}.benefits .wrap{grid-template-columns:repeat(2,1fr)}.cards{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:560px){.wrap{width:min(100% - 28px,1200px)}nav{height:78px}.brand{transform:scale(.8);transform-origin:left center}.hero{min-height:510px}.benefits .wrap,.cards,.about-grid,.footer-grid{grid-template-columns:1fr}.benefit{border-bottom:1px solid #e6dfd5}.utility{font-size:10px}.section{padding:45px 0}}
+  </style>
+</head>
+<body>
+  <div class="utility"><div class="wrap"><span class="pin">Šopčev prolaz 1, 49246 Marija Bistrica</span><span class="clock">Pon – Pet: 08:00 – 16:00 &nbsp; | &nbsp; Sub: 08:00 – 14:00</span><span class="phone">+385 99 755 5512</span><span class="mail">trgovine.kralj@gmail.com</span></div></div>
+  <header><nav class="wrap"><a class="brand" href="#pocetna" aria-label="KRALJ početna"><svg class="brand-logo" viewBox="0 0 64 74" aria-hidden="true"><path class="crown" d="M9 18l6-9 10 8L32 5l7 12 10-8 6 9-5 12H14z"/><path d="M16 35c-7 4-9 12-8 18m10-13l-8-2m9-3l-4-7M48 35c7 4 9 12 8 18m-10-13l8-2m-9-3l4-7"/><polyline points="25,43 22,55 27,67 32,71 37,67 42,55 39,43"/><path class="head" d="M25 43q7-6 14 0l3 13q-3 10-10 13-7-3-10-13z"/><path d="M29 53h1m7 0h1M29 60q3 3 6 0"/></svg><span class="brand-copy"><strong>KRALJ</strong><small>OBRT ZA TRGOVINU · OD 1985.</small></span></a><ul class="nav-links"><li><a class="active" href="#pocetna">POČETNA</a></li><li><a href="#onama">O NAMA</a></li><li><a href="#ponuda">PONUDA</a></li><li><a href="#galerija">GALERIJA</a></li><li><a href="#kontakt">KONTAKT</a></li></ul></nav></header>
+  <main>
+    <section class="hero" id="pocetna"><div class="wrap hero-content"><h1>TRADICIJA.<br><em>KVALITETA.</em><br>POVJERENJE.</h1><div class="since">OD 1985.</div><p>Dugogodišnjim iskustvom i predanošću pružamo najbolje proizvode i uslugu našim kupcima. Sve za lovce na jednom mjestu.</p><div class="buttons"><a class="button gold" href="#onama">VIŠE O NAMA&nbsp; ›</a><a class="button" href="#ponuda">NAŠA PONUDA&nbsp; ›</a></div></div></section>
+    <section class="benefits"><div class="wrap"><div class="benefit"><i>♢</i><div><strong>TRADICIJA OD 1985.</strong><span>Više od 35 godina iskustva i povjerenja.</span></div></div><div class="benefit"><i>✿</i><div><strong>KVALITETNI PROIZVODI</strong><span>Provjereni brendovi i visoka kvaliteta.</span></div></div><div class="benefit"><i>♙</i><div><strong>STRUČNOST I SAVJET</strong><span>Stručno osoblje uvijek vam stoji na raspolaganju.</span></div></div><div class="benefit"><i>♧</i><div><strong>POVJERENJE KUPACA</strong><span>Naši kupci nas preporučuju i vraćaju nam se.</span></div></div><div class="benefit"><i>▣</i><div><strong>BRZA USLUGA</strong><span>Brza dostava i usluga na visokoj razini.</span></div></div></div></section>
+    <section class="section" id="ponuda"><div class="wrap"><h2 class="section-title">NAŠA PONUDA</h2><div class="cards" id="galerija"><article class="card"><div class="card-image rifle"></div><div class="card-body"><div class="card-icon">⌖</div><h3>LOVAČKO ORUŽJE</h3><p>Puške, karabini, sačmarice i pribor za oružje.</p><a href="#kontakt">SAZNAJ VIŠE&nbsp; ›</a></div></article><article class="card"><div class="card-image optic"></div><div class="card-body"><div class="card-icon">◉</div><h3>OPTIKA I DALJEKOZORI</h3><p>Dalekozori, durbini, nišani i sredstva za promatranje.</p><a href="#kontakt">SAZNAJ VIŠE&nbsp; ›</a></div></article><article class="card"><div class="card-image camera"></div><div class="card-body"><div class="card-icon">▣</div><h3>KAMERE ZA LOV</h3><p>Lovačke kamere za nadzor i snimanje u prirodi.</p><a href="#kontakt">SAZNAJ VIŠE&nbsp; ›</a></div></article><article class="card"><div class="card-image night"></div><div class="card-body"><div class="card-icon">☾</div><h3>NOĆNA OPTIKA</h3><p>Digitalne i termalne optike za noćne uvjete.</p><a href="#kontakt">SAZNAJ VIŠE&nbsp; ›</a></div></article><article class="card"><div class="card-image outdoor"></div><div class="card-body"><div class="card-icon">♙</div><h3>ODJEĆA I OBUĆA</h3><p>Lovačka odjeća i obuća za sve vremenske uvjete.</p><a href="#kontakt">SAZNAJ VIŠE&nbsp; ›</a></div></article></div></div></section>
+    <section class="section about" id="onama"><div class="wrap about-grid"><div><h2>O NAMA</h2><p>Obrt za trgovinu KRALJ osnovan je 1985. godine u Mariji Bistrici s ciljem zadovoljavanja potreba lovaca, ribolovaca i svih ljubitelja prirode.</p><p>Kontinuiranim radom, poštenjem i profesionalnim pristupom stekli smo povjerenje brojnih kupaca iz cijele Hrvatske.</p><p>Kod nas ćete pronaći širok asortiman kvalitetnih proizvoda, stručan savjet i uslugu na koju se možete osloniti.</p><p><b>Berislav Kralj</b>, <i>vlasnik</i></p></div><div class="partner"><h2>VAŠ PARTNER<br>U PRIRODI</h2><div class="deer" aria-label="Jelen s rogovima"></div></div></div></section>
+  </main>
+  <footer id="kontakt"><div class="wrap"><div class="footer-grid"><div><h3>KONTAKT</h3><p>Šopčev prolaz 1<br>49246 Marija Bistrica<br>+385 99 755 5512<br>trgovine.kralj@gmail.com<br>Pon – Pet: 08:00 – 16:00<br>Sub: 08:00 – 14:00</p></div><div><h3>BRZE POVEZNICE</h3><ul><li>Početna</li><li>O nama</li><li>Ponuda</li><li>Kontakt</li></ul></div><div><h3>PRATITE NAS</h3><p><a class="map-link" href="https://www.njuskalo.hr/moje-njuskalo/poslovni/moji-oglasi/aktivni-oglasi" target="_blank" rel="noopener">NJUSKALO TRGOVINA ↗</a></p></div><div><h3>GDJE SE NALAZIMO</h3><div class="map">Šopčev prolaz 1<br>49246 Marija Bistrica</div><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=%C5%A0op%C4%8Dev+prolaz+1%2C+49246+Marija+Bistrica" target="_blank" rel="noopener">OTVORI U GOOGLE KARTAMA ↗</a></div></div><div class="copyright">© 2026 KRALJ – obrt za trgovinu. Sva prava pridržana.</div></div></footer>
+</body>
+</html>
