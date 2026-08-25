@@ -10,15 +10,16 @@
     /* Probni pomak naslovnog bloka skroz ulijevo */
     .hero .wrap{max-width:none;margin:0;padding-left:28px}
     .map-box{padding:0;overflow:hidden}.map-box iframe{width:100%;height:100%;min-height:230px;border:0;display:block}
-    .hero{background:linear-gradient(90deg,rgba(4,17,11,.58) 0%,rgba(4,17,11,.30) 47%,rgba(4,17,11,0) 100%),url('./assets/gallery-deer.png') 78% center/cover;background-size:auto,118% auto;animation:hero-pan 9s ease-in-out infinite alternate}
+    .hero{background:linear-gradient(90deg,rgba(4,17,11,.58) 0%,rgba(4,17,11,.30) 47%,rgba(4,17,11,0) 100%),url('./gallery-deer.png') 78% center/cover;background-size:auto,118% auto;animation:hero-pan 9s ease-in-out infinite alternate}
     @keyframes hero-pan{from{background-position:0 0,72% center}to{background-position:0 0,84% center}}
     .hero{position:relative;overflow:hidden}.hero:after{content:"";position:absolute;inset:-15%;pointer-events:none;background:radial-gradient(ellipse at 78% 32%,rgba(236,199,111,.18),transparent 27%),radial-gradient(ellipse at 70% 68%,rgba(222,239,204,.10),transparent 20%);mix-blend-mode:screen;animation:forest-light 7s ease-in-out infinite alternate}.hero .wrap{position:relative;z-index:1}
     @keyframes forest-light{from{transform:translate(-2%,-1%) scale(1);opacity:.42}to{transform:translate(3%,2%) scale(1.08);opacity:.82}}
-    .category:nth-child(1) .photo{background-image:url('./assets/rifle-card.png')}
-    .category:nth-child(2) .photo{background-image:url('./assets/binoculars-card.png')}
-    .category:nth-child(5) .photo{background-image:url('./assets/trail-camera-card.png')}
-    .category:nth-child(6) .photo{background-image:url('./assets/optics-card.png')}
-    .category:nth-child(6) .photo{background-image:url('./assets/day-night-optics-card.png')}
+    .category:nth-child(1) .photo{background-image:url('./rifle-card.png')}
+    .category:nth-child(2) .photo{background-image:url('./binoculars-card.png')}
+    .category:nth-child(3) .photo{background-image:url('./gallery-apparel.png')}
+    .category:nth-child(5) .photo{background-image:url('./trail-camera-card.png')}
+    .category:nth-child(6) .photo{background-image:url('./optics-card.png')}
+    .category:nth-child(6) .photo{background-image:url('./day-night-optics-card.png')}
     .nav-cta{display:flex;align-items:center;gap:7px}.njuskalo-badge{display:inline-flex;align-items:center;border-radius:4px;background:#fff;color:#f36e21;padding:3px 5px;font:800 10px/1 Arial,sans-serif;letter-spacing:-.45px;text-transform:lowercase;box-shadow:0 1px 4px rgba(0,0,0,.22)}.benefit-link{text-decoration:none;color:inherit;cursor:pointer}.brand-logo{width:52px;height:57px;display:block;flex:none}.brand-logo .crest{fill:var(--ink)}.brand-logo .antlers{fill:none;stroke:var(--gold);stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round}.brand-logo .deer{fill:var(--gold)}
     .official-antlers{position:relative;overflow:hidden;border-radius:50%;background:#f6f4ed;border:1px solid #d3a552}.official-antlers img{position:absolute;width:220px;max-width:none;height:auto;left:-84px;top:0}.official-antlers:after{content:"";position:absolute;left:0;right:0;bottom:0;height:17px;background:#f6f4ed}
     @media(prefers-reduced-motion:reduce){.hero{animation:none}}
