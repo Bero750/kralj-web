@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 260" role="img" aria-labelledby="title desc">
+  <title id="title">KRALJ — prijedlog logotipa</title>
+  <desc id="desc">Zlatni amblem jelena s rogovima uz naziv trgovine KRALJ.</desc>
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f6d481"/>
+      <stop offset=".52" stop-color="#d6a13d"/>
+      <stop offset="1" stop-color="#a96f16"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(16 16)" fill="none" stroke="url(#gold)" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="112" cy="112" r="100" stroke-width="3"/>
+    <path d="M76 76C44 60 34 36 42 18M65 64 42 55M58 51 50 34M148 76c32-16 42-40 34-58M159 64l23-9M166 51l8-17" stroke-width="6"/>
+    <path d="M78 92c11-16 24-24 34-24s23 8 34 24l-8 58c-8 19-17 29-26 34-9-5-18-15-26-34z" stroke-width="5"/>
+    <path d="M87 95 67 108l20 7M137 95l20 13-20 7M101 111h1M122 111h1M104 132c5 5 12 5 17 0M92 149l20 20 20-20" stroke-width="4"/>
+    <path d="M82 190h60" stroke-width="3"/>
+  </g>
+  <g fill="#f7f3ea">
+    <text x="250" y="108" font-family="Georgia, 'Times New Roman', serif" font-size="76" font-weight="700" letter-spacing="5">KRALJ</text>
+    <text x="254" y="146" font-family="Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="3.4">OBRT ZA TRGOVINU</text>
+    <path d="M254 171h74" stroke="url(#gold)" stroke-width="3"/>
+    <text x="344" y="178" fill="url(#gold)" font-family="Georgia, 'Times New Roman', serif" font-size="22" letter-spacing="2">OD 1985.</text>
+    <path d="M486 171h120" stroke="url(#gold)" stroke-width="3"/>
+  </g>
+</svg>
