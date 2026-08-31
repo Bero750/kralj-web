@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://bero750.github.io/kralj-web/sitemap.xml
+Sitemap: https://trgovinakralj.hr/sitemap.xml
